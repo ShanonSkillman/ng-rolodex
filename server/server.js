@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const userRoutes = require('./routes/users');
 const decorator = require('./database/decorator');
 
+
 console.log("PROCESSENV----->", process.env)
 //DATA VARS
 const PORT = process.env.PORT;
@@ -22,6 +23,17 @@ app.use(bodyParser.json({ extended: true }));
 app.use(decorator);
 
 //ROUTES
+
+app.use(bodyParser.json());
+
+app.get('/api/movies', (req, res) => {
+    return res.json([
+        { title: 'Avengers' },
+        { title: 'Shazam!' },
+        { title: 'Kill Bill!' }
+    ]);
+})
+
 app.use('/api', userRoutes);
 app.get('/api/smoke', (req, res) => {
     res.json({ smoke: 'test' });
