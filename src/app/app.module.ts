@@ -10,11 +10,15 @@ import { AppComponent } from './app/app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 
+//Shared Components
+import { HeaderComponent } from './shared/header/header.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
+    HeaderComponent,
   ],
   imports: [
     FormsModule,

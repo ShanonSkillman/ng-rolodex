@@ -26,20 +26,25 @@ app.use(decorator);
 
 app.use(bodyParser.json());
 
-app.get('/api/movies', (req, res) => {
-    return res.json([
-        { title: 'Avengers' },
-        { title: 'Shazam!' },
-        { title: 'Kill Bill!' }
-    ]);
-})
+// app.get('/api/movies', (req, res) => {
+//     return res.json([
+//         { title: 'Avengers' },
+//         { title: 'Shazam!' },
+//         { title: 'Kill Bill!' }
+//     ]);
+// })
 
-app.use('/api', userRoutes);
-app.get('/api/smoke', (req, res) => {
+app.use('/users', userRoutes);
+// app.use('/contacts', contactRoutes);
+
+app.get('/', (req, res) => {
     res.json({ smoke: 'test' });
 });
 
+
+
+
 //START SERVER
 app.listen(PORT, () => {
-    console.log('Server started on port: ${PORT}')
+    console.log(`Server started on port: ${PORT}`)
 })
