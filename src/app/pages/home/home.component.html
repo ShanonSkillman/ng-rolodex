@@ -2,9 +2,13 @@
     {{ movie }}
 </p>
 
-
 <p *ngIf="show">
-    Found Me
+    Reveal Contacts
 </p>
 
-{{ movies | json}}
+<button (click)="toggle($event, show)">
+    Show Rolodex
+</button>
+
+
+<!-- {{ movies | json}} -->

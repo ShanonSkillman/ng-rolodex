@@ -8,15 +8,24 @@ import { BackendService } from '../../services/backend.service';
 })
 export class HomeComponent implements OnInit {
 
+    color: string = '';
+    movie: string = 'Contacts';
+    show: boolean = true;
 
-    movies: { title: string }[] = [];
+    // movies: { title: string }[] = [];
 
     constructor(private backend: BackendService) { }
 
     ngOnInit() {
-        this.backend.getMovies()
-            .then((movies: { title: string }[]) => {
-                this.movies = movies;
-            });
+        // this.backend.getMovies()
+        //     .then((movies: { title: string }[]) => {
+        //         this.movies = movies;
+        //     });
+    }
+
+    toggle(e: any, show: boolean) {
+        console.log(e)
+        console.log(show)
+        this.show = !this.show;
     }
 }
