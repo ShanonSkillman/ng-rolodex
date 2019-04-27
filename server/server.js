@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/users');
+const contactRoutes = require('./routes/contacts');
 const decorator = require('./database/decorator');
 
 
@@ -35,13 +36,12 @@ app.use(bodyParser.json());
 // })
 
 app.use('/users', userRoutes);
-// app.use('/contacts', contactRoutes);
+app.use('/contacts', contactRoutes);
+
 
 app.get('/', (req, res) => {
     res.json({ smoke: 'test' });
 });
-
-
 
 
 //START SERVER

@@ -1,21 +1,21 @@
-// const express = require('express');
-// const router = express.Router();
-// // const URL = require('url');
-// const Contact = require('../.././database/models/Contact');
+const express = require('express');
+const router = express.Router();
+// const URL = require('url');
+const Contact = require('../.././database/models/Contact');
 
 
-// router.route('/')
-//     .get((req, res) => {
+router.route('/')
+    .get((req, res) => {
 
-//         return new req.database.Contact().fetchAll()
-//             .then((users) => {
-//                 return res.json(contacts);
-//             })
-//             .catch((err) => {
-//                 console.log(err);
-//                 res.sendStatus(500);
-//             });
-//     })
+        return new req.database.Contact().fetchAll()
+            .then((contacts) => {
+                return res.json(contacts);
+            })
+            .catch((err) => {
+                console.log(err);
+                res.sendStatus(500);
+            });
+    })
 // .post((req, res) => {
 //     const username = req.body.username;
 //     return new req.database.User({ username }).save()
