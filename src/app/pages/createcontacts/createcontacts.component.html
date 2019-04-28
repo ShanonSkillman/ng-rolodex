@@ -1,0 +1,74 @@
+<h1>
+    Create Contacts
+</h1>
+
+<form>
+    <div>
+        <label for="name">
+            Name:
+        </label>
+        <br />
+        <input type="text" name="name" [(ngModel)]="formData.name" />
+    </div>
+
+    <div>
+        <label for="address">
+            Address:
+        </label>
+        <br />
+        <input type="text" name="address" [(ngModel)]="formData.address" />
+    </div>
+
+    <div>
+        <label for="mobile">
+            Mobile:
+        </label>
+        <br />
+        <input type="text" name="mobile" [(ngModel)]="formData.mobile" />
+    </div>
+
+    <div>
+        <label for="email">
+            Email:
+        </label>
+        <br />
+        <input type="text" name="email" [(ngModel)]="formData.email" />
+    </div>
+
+    <div>
+        <label for="instagram">
+            Instagram:
+        </label>
+        <br />
+        <input type="text" name="instagram" [(ngModel)]="formData.instagram" />
+    </div>
+
+    <div>
+        <label for="github">
+            Github:
+        </label>
+        <br />
+        <input type="text" name="github" [(ngModel)]="formData.github" />
+    </div>
+
+    <div>
+        <label for="linkedin">
+            Linkedin:
+        </label>
+        <br />
+        <input type="text" name="linkedin" [(ngModel)]="formData.linkedin" />
+
+    </div>
+
+    <div>
+        <label for="note">
+            Note:
+        </label>
+        <br />
+        <textarea name="note" id="note" cols="30" rows="10" [(ngModel)]="formData.note"></textarea>
+    </div>
+</form>
+
+<button (click)="clearData()">Clear</button>
+
+{{ formData | json }}

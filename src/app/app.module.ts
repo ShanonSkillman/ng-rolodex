@@ -8,10 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 //Component
 import { AppComponent } from './app/app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ViewAllContactsComponent } from './pages/viewallcontacts/viewallcontacts.component';
+import { CreateContactsComponent } from './pages/createcontacts/createcontacts.component'
 import { LoginComponent } from './pages/login/login.component';
 
 //Shared Components
 import { HeaderComponent } from './shared/header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +22,8 @@ import { HeaderComponent } from './shared/header/header.component';
     HomeComponent,
     LoginComponent,
     HeaderComponent,
+    ViewAllContactsComponent,
+    CreateContactsComponent,
   ],
   imports: [
     FormsModule,
